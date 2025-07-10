@@ -1,0 +1,55 @@
+// Firgure out how to get this to work: @use './Scss_Variable/colors.module.scss';
+
+// Main Set of Colors
+$background: #ECF8F8;
+$text: #161925;
+$black: #161925;
+$white: #ffffff;
+
+// Accent Pallet
+$accent-400: #5094FF;
+$accent-300: #83A8D4;
+$accent-200: #94B4DA;
+$accent-100: #A4BFDF;
+
+// Button Colors
+$cta-primary: #FC814A;
+
+
+.nav{
+    position: relative;
+    background-color: $white;
+    width: 100%;    
+    border-bottom: 2px solid $accent-100;
+    padding: 8px 16px;
+
+
+
+    @media (min-width: 567px) {
+        padding: 8px 32px 0;
+    }
+}
+
+.navContainer{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+}
+
+.navList{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    flex: 1 0 auto;
+}
+
+.navItem{
+    margin: 0 12px;
+    font-size: 1.3rem;
+}

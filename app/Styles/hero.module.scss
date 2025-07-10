@@ -1,0 +1,48 @@
+// Firgure out how to get this to work: @use './Scss_Variable/colors.module.scss';
+
+// Main Set of Colors
+$background: #ECF8F8;
+$text: #161925;
+$black: #161925;
+$white: #ffffff;
+
+// Accent Pallet
+$accent-400: #5094FF;
+$accent-300: #83A8D4;
+$accent-200: #94B4DA;
+$accent-100: #A4BFDF;
+
+// Button Colors
+$cta-primary: #FC814A;
+
+.heroSection{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.leftSection{
+    flex: 0 1 40%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: $white;
+    background-color: $accent-400;
+    padding: 64px 32px;
+
+    h1{
+        font-size: 2.9rem;
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
+}
+
+.rightSection{
+    flex: 0 1 60%;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
