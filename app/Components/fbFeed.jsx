@@ -1,12 +1,12 @@
 'use client'
 
-import React from "react";
+import { useEffect } from "react";
 
 import feedStyle from "../Styles/feed.module.scss";
 
-export default function FbFeed(){
+const FbFeed = ({ embedUrl }) => {
 
-  React.useEffect(() => {
+  useEffect(() => {
     const script = document.createElement('script');
 
     script.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v23.0";
@@ -18,6 +18,13 @@ export default function FbFeed(){
       document.body.removeChild(script);
     }
   }, []);
+
+  useEffect(() => {
+    // Ensure the Facebook SDK is loaded before parsing
+    if (window.FB) {
+      window.FB.XFBML.parse();
+    }
+  }, [embedUrl]);
 
   return (
     <div className={feedStyle.feedContainer}>
@@ -44,3 +51,5 @@ export default function FbFeed(){
     </div>
   );
 }
+
+export default FbFeed;
