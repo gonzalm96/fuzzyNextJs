@@ -29,7 +29,7 @@ export default function Home() {
             We work hard to advocate for these amazing  animals and all of the resources they provide. Our dream is to build a  viable fiber business using locally sourced wool, while providing a loving home to the animals who have provided us with so much.</p>
 
             <p>Thank you for joining us on this adventure!</p>
-            <CtaButton primary={true} link={"#"} linkText={"Visit Our Shop!"} />
+            <CtaButton primary={true} link={"https://www.etsy.com/shop/fuzzybritchesfiber/?etsrc=sdt"} linkText={"Visit Our Shop!"} />
           </div>
           <div className={styles.contentRight}>
             <FbFeed />

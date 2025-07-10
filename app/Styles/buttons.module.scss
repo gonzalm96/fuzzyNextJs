@@ -8,7 +8,7 @@ $white: #ffffff;
 
 // Accent Pallet
 $accent-400: #5094FF;
-$accent-300: #83A8D4;
+$accent-300: #70A7FF;
 $accent-200: #94B4DA;
 $accent-100: #A4BFDF;
 
@@ -16,10 +16,13 @@ $accent-100: #A4BFDF;
 $cta-primary: #FC814A;
 
 .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 8px 12px;
 	border-radius: 4px;
-
     width: fit-content;
+    margin-top: 32px;
 }
 
 .primary{
@@ -27,9 +30,31 @@ $cta-primary: #FC814A;
     color: $white;
     font-size: 18px;
     font-weight: 600;
+
+    &:hover{
+        background-color: #FE9E72;
+    }
 }
 
 .secondary{
-    background: none;
+    background: $accent-400;
     border: 2px solid $accent-400;
+    color: $white;
+
+    &:hover{
+        background: #85B4FF;
+        border-color: #85B4FF;
+    }
+}
+
+.largeBtn{
+    @media(min-width: 576px){
+        min-width: 150px;
+        height: 40px;
+        font-size: 22px;
+    }
+}
+
+.navBtn{
+    margin-top: 0;
 }

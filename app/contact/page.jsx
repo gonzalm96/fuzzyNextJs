@@ -33,7 +33,7 @@ export default function Contact() {
                         <p>
                         <strong>Facebook:</strong> <a href="https://www.facebook.com/fuzzybritchesfiber/"> Fuzzy Britches Fiber</a>
                         </p>
-                        <CtaButton primary={true} link={"#"} linkText={"Visit Our Shop!"} />
+                        <CtaButton primary={true} larger={true} link={"https://www.etsy.com/shop/fuzzybritchesfiber/?etsrc=sdt"} linkText={"Visit Our Shop!"} />
                     </div>
                     
           </div>
