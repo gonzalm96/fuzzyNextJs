@@ -33,15 +33,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+          <header>
+            <NavBar /> {/*Maybe make this the place where the desktop nav switches to mobile?*/}
+          </header>
           <div className={styles.page + " " + playFair.className}>
-            <header>
-              <NavBar /> {/*Maybe make this the place where the desktop nav switches to mobile?*/}
-            </header>
             {children}
-            <footer className={styles.footer}>
-              <FooterBar />
-            </footer>
-          </div>          
+          </div>      
+          <footer className={styles.footer}>
+            <FooterBar />
+          </footer>    
       </body>
     </html>
   );
