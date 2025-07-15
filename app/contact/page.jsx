@@ -13,6 +13,7 @@ const playFair = Playfair_Display({
 })
 
 export default function Contact() {
+
   return (
     <div className={styles.page + " " + playFair.className}>
         <main className={styles.main}>

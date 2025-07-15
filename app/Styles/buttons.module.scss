@@ -21,29 +21,43 @@ $cta-primary: #FC814A;
     align-items: center;
     padding: 8px 12px;
 	border-radius: 4px;
-    width: fit-content;
-    margin-top: 32px;
+    width: 100%; 
+    margin-top: 16px;        
+
+    @media (min-width: 576px) {
+        margin-top: 32px;   
+        width: fit-content;
+    }    
 }
 
 .primary{
     background-color: $cta-primary;
     color: $white;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 600;
 
     &:hover{
         background-color: #FE9E72;
     }
+
+    @media (min-width: 576px) {
+        font-size: 18px;
+    }
 }
 
 .secondary{
     background: $accent-400;
+    font-size: 22px;
     border: 2px solid $accent-400;
-    color: $white;
+    color: $white;    
 
     &:hover{
         background: #85B4FF;
         border-color: #85B4FF;
+    }
+
+    @media (min-width: 576px) {
+        font-size: 18px;
     }
 }
 

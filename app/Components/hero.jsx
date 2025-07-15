@@ -11,6 +11,7 @@ const merry = Merriweather({
 });
 
 export default function Hero(){
+
     return(
         <div className={heroStyles.heroSection}>
             <div className={heroStyles.leftSection}>

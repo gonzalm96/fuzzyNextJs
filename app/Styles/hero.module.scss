@@ -17,11 +17,12 @@ $cta-primary: #FC814A;
 
 .heroSection{
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
 
     @media (min-width: 576px) {
         max-width: 1440px; 
         margin: 0 auto;
+        flex-flow: row nowrap;
     }
 
     @media (min-width: 1475px) {        
@@ -34,21 +35,34 @@ $cta-primary: #FC814A;
 }
 
 .leftSection{
-    flex: 0 1 40%;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: flex-start;
     color: $white;
     background-color: $accent-400;
-    padding: 64px 32px;
+    padding: 24px 16px;
+
 
     h1{
-        font-size: 2.9rem;
+        font-size: 40px;
     }
 
     h2{
-        font-size: 1.5rem;
+        font-size: 24px;
+    }
+
+    @media (min-width: 576px){
+        flex: 0 1 40%;
+        padding: 64px 32px;
+
+        h1{
+            font-size: 2.9rem;
+        }
+
+        h2{
+            font-size: 1.5rem;
+        }
     }
 
     @media (min-width: 1475px) {

@@ -18,7 +18,8 @@ $cta-primary: #FC814A;
 .footerContainer{
     background-color: $white;
     width: 100%;
-    padding: 0 16px;
+    padding: 16px;
+    border-top: 2px solid $accent-100;
 
     @media (min-width:576px) {
         padding: 16px 32px;
@@ -27,7 +28,16 @@ $cta-primary: #FC814A;
 
 .footerList{
     display: flex;
-    flex-flow: row nowrap;
-    list-style: none;
     justify-content: space-between;
+    align-items: center;
+    flex-flow: column nowrap;
+    list-style: none;
+
+    li{
+        margin: 8px auto;
+    }
+
+    @media (min-width: 576px) {
+        flex-flow: row nowrap;
+    }
 }
