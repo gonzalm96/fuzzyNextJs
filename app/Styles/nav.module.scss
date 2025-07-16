@@ -11,6 +11,7 @@ $accent-400: #5094FF;
 $accent-300: #83A8D4;
 $accent-200: #94B4DA;
 $accent-100: #A4BFDF;
+$accent: $accent-400;
 
 // Button Colors
 $cta-primary: #FC814A;
@@ -38,7 +39,7 @@ $cta-primary: #FC814A;
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-
+    color: $text;
 
 }
 
@@ -59,10 +60,23 @@ $cta-primary: #FC814A;
     position: absolute;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-end;
-    align-items: center;
     list-style: none;
     flex: 1 0 auto;
+    width: 70%;
+    height: 100vh;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    background-color: $white;
+    border-left: 3px solid $accent-400;
+
+    li{
+        width: 100%;
+        max-width: 270px;
+        text-align: right;
+        padding: 16px;
+        margin: 0;
+    }
 
     @media (min-width: 576px) {
         display: none;

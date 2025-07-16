@@ -22,6 +22,7 @@ export default function NavBar(){
     const [slideOut, setSlide] = useState(false);
 
     function activateMobileNav(){
+        console.log(slideOut);
         if(slideOut){
             setSlide(false);
         }
@@ -50,6 +51,11 @@ export default function NavBar(){
                 </button>
                 <div className={slideOut ? navStyle.showNav:navStyle.hideNav}>
                     <ul className={navStyle.navListMobile}>
+                        <li>
+                            <button className={navStyle.mobileMenuBtn} onClick={activateMobileNav}>
+                                <Image src={HamburgerMenu} height={40} width={40} alt="Open Navigation Menu"/>
+                            </button>
+                        </li>
                         <li className={signika.className + " " + navStyle.navItem}><Link href="/">Home</Link></li> 
                         <li className={signika.className + " " + navStyle.navItem}><Link href="/about">About Us</Link></li>
                         <li className={signika.className + " " + navStyle.navItem}><a href="https://docs.google.com/document/d/17tlhusqXq7PFRhfEtKDbxMnCbZxt8IMC346OVQLwqJI/edit?usp=sharing"> Local Resources </a></li>
