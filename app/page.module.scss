@@ -124,6 +124,7 @@ $cta-primary: #FC814A;
         }   
         
         @media (min-width: 576px) {
+            flex-flow: row nowrap;
             img:nth-child(even){
             margin: 0 16px;
             }
