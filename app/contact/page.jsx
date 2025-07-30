@@ -23,7 +23,7 @@ export default function Contact() {
                 <h1 >Contact Us</h1>
                     <div className={styles.contactInfo}>
                         <p>
-                        <strong>Location:</strong> Standwood, WA
+                        <strong>Location:</strong> Stanwood, WA
                         </p>
                         <p>
                         <strong>Phone:</strong> 425-736-4023
