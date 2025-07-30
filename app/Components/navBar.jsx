@@ -1,15 +1,9 @@
-'use client'
-
-
-import { useState } from "react"
 import Logo from "./logo"
 import CtaButton from "./ctaButton"
 
 import Link from "next/link"
-import Image from "next/image"
 
 import navStyle from '../Styles/nav.module.scss'
-import HamburgerMenu from '../../public/images/Menu.png'
 
 import { Signika } from "next/font/google"
 
@@ -18,18 +12,6 @@ const signika = Signika({
 })
 
 export default function NavBar(){
-
-    const [slideOut, setSlide] = useState(false);
-
-    function activateMobileNav(){
-        console.log(slideOut);
-        if(slideOut){
-            setSlide(false);
-        }
-        else{
-            setSlide(true);
-        }
-    }
 
     function DesktopNav() {
         return(
@@ -54,7 +36,7 @@ export default function NavBar(){
                     <CtaButton primary={true} nav={true} link={"https://www.etsy.com/shop/fuzzybritchesfiber/?etsrc=sdt"} linkText={"Visit Our Shop!"}/>
                 </div>
                 <div className={navStyle.navList}>
-                    <div className={slideOut ? navStyle.showNav:navStyle.hideNav}>
+                    <div>
                         <ul className={navStyle.navListMobile}>
                             <li className={signika.className + " " + navStyle.navItem}><Link href="/">Home</Link></li> 
                             <li className={signika.className + " " + navStyle.navItem}><Link href="/about">About Us</Link></li>
