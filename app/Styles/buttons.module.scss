@@ -71,4 +71,11 @@ $cta-primary: #FC814A;
 
 .navBtn{
     margin-top: 0;
+
+    @media (max-width: 576px) {
+        max-width: 250px;
+        max-height: 50px;
+        padding: 8px;
+    }
+    
 }

@@ -33,13 +33,17 @@ $cta-primary: #FC814A;
 
 .navContainer{
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
     color: $text;
+
+    @media (min-width: 576px) {
+        flex-flow: row;
+    }
 
 }
 
@@ -57,25 +61,28 @@ $cta-primary: #FC814A;
 }
 
 .navListMobile{
-    position: absolute;
+    position: relative;
     display: flex;
-    flex-flow: column nowrap;
+    justify-content: center;
+    flex-flow: row wrap;
     list-style: none;
-    flex: 1 0 auto;
-    width: 70%;
-    height: 100vh;
-    z-index: 100;
-    top: 0;
-    right: 0;
     background-color: $white;
-    border-left: 3px solid $accent-400;
+    padding: 16px 0;
+    
 
     li{
-        width: 100%;
-        max-width: 270px;
-        text-align: right;
-        padding: 16px;
-        margin: 0;
+        text-align: center;
+        margin: 0 8px;
+
+        &:hover, &:focus{
+            background-color: $accent-300;
+        }
+
+        @media (min-width: 576px) {
+            padding: 16px 8px 0;
+            margin: 0 8px; 
+        }
+
     }
 
     @media (min-width: 576px) {
@@ -83,12 +90,11 @@ $cta-primary: #FC814A;
     }
 }
 
-.showNav{
-    display: block;
-}
-
-.hideNav{
-    display: none;
+.mobileHeading{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navItem{
@@ -108,6 +114,26 @@ $cta-primary: #FC814A;
     display: inline-block;
 
     @media (min-width: 576px){
+        display: none;
+    }
+}
+
+.desktop{
+    display: none;
+
+    @media (min-width: 576px) {
+        display: block;
+    }
+}
+
+.mobile{
+    display: block;
+
+    .btn{
+        max-width: 250px;
+    }
+
+    @media (min-width: 576px) {
         display: none;
     }
 }
