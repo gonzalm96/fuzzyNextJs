@@ -54,6 +54,15 @@ $cta-primary: #FC814A;
     align-items: center;
     list-style: none;
     flex: 1 0 auto;
+    
+
+    li{
+        border-bottom: 2px solid $white;
+
+        &:hover{
+            border-bottom: 2px solid $accent;
+        }
+    }
 
     @media (min-width: 576px) {
         display: flex;
@@ -72,10 +81,13 @@ $cta-primary: #FC814A;
 
     li{
         text-align: center;
-        margin: 0 8px;
+        padding: 4px 8px;
 
-        &:hover, &:focus{
-            background-color: $accent-300;
+
+        &:focus{
+            background-color: $accent;
+            color: $white;
+            border-radius: 4px;
         }
 
         @media (min-width: 576px) {
@@ -98,8 +110,12 @@ $cta-primary: #FC814A;
 }
 
 .navItem{
-    margin: 0 12px;
+
     font-size: 1.3rem;
+
+    @media (min-width:576px) {
+           margin: 0 12px; 
+    }
 }
 
 .desktopLogo{
