@@ -1,19 +1,4 @@
-// Firgure out how to get this to work: @use './Scss_Variable/colors.module.scss';
-
-// Main Set of Colors
-$background: #ECF8F8;
-$text: #161925;
-$black: #161925;
-$white: #ffffff;
-
-// Accent Pallet
-$accent-400: #5094FF;
-$accent-300: #83A8D4;
-$accent-200: #94B4DA;
-$accent-100: #A4BFDF;
-
-// Button Colors
-$cta-primary: #FC814A;
+@use '../Scss_Variable/colors.module.scss' as color;
 
 .heroSection{
     display: flex;
@@ -39,8 +24,8 @@ $cta-primary: #FC814A;
     flex-flow: column;
     justify-content: center;
     align-items: flex-start;
-    color: $white;
-    background-color: $accent-400;
+    color: color.$white;
+    background-color: color.$accent-400;
     padding: 24px 16px;
 
 
@@ -67,7 +52,7 @@ $cta-primary: #FC814A;
 
     @media (min-width: 1475px) {
         border-radius: 4px 0 0 4px;
-        border: 2px solid $accent-400;
+        border: 2px solid color.$accent-400;
     }
 }
 

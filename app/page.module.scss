@@ -1,19 +1,4 @@
-// Firgure out how to get this to work: @use './Scss_Variable/colors.module.scss';
-
-// Main Set of Colors
-$background: #ECF8F8;
-$text: #161925;
-$black: #161925;
-$white: #ffffff;
-
-// Accent Pallet
-$accent-400: #5094FF;
-$accent-300: #83A8D4;
-$accent-200: #94B4DA;
-$accent-100: #A4BFDF;
-
-// Button Colors
-$cta-primary: #FC814A;
+@use './Scss_Variable/colors.module.scss' as color;
 
 .banner{
     @media (max-width: 576px) {
@@ -23,8 +8,8 @@ $cta-primary: #FC814A;
 
 .page{
     position: relative;
-    background-color: $background;
-    color: $text;
+    background-color: color.$background;
+    color: color.$text;
     font-size: 16px;
 
 
@@ -68,7 +53,7 @@ $cta-primary: #FC814A;
     }
 
     img{
-        border: 1px solid $accent-100;
+        border: 1px solid color.$accent-100;
         height: 100%;
         overflow: hidden;
     }

@@ -1,19 +1,4 @@
-// Firgure out how to get this to work: @use './Scss_Variable/colors.module.scss';
-
-// Main Set of Colors
-$background: #ECF8F8;
-$text: #161925;
-$black: #161925;
-$white: #ffffff;
-
-// Accent Pallet
-$accent-400: #5094FF;
-$accent-300: #70A7FF;
-$accent-200: #94B4DA;
-$accent-100: #A4BFDF;
-
-// Button Colors
-$cta-primary: #FC814A;
+@use '../Scss_Variable/colors.module.scss' as color;
 
 .btn{
     display: flex;
@@ -31,8 +16,8 @@ $cta-primary: #FC814A;
 }
 
 .primary{
-    background-color: $cta-primary;
-    color: $white;
+    background-color: color.$cta-primary;
+    color: color.$white;
     font-size: 22px;
     font-weight: 600;
 
@@ -46,10 +31,10 @@ $cta-primary: #FC814A;
 }
 
 .secondary{
-    background: $accent-400;
+    background: color.$accent-400;
     font-size: 22px;
-    border: 2px solid $accent-400;
-    color: $white;    
+    border: 2px solid color.$accent-400;
+    color: color.$white;    
 
     &:hover{
         background: #85B4FF;

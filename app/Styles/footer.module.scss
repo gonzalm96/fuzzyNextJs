@@ -1,25 +1,10 @@
-// Firgure out how to get this to work: @use './Scss_Variable/colors.module.scss';
-
-// Main Set of Colors
-$background: #ECF8F8;
-$text: #161925;
-$black: #161925;
-$white: #ffffff;
-
-// Accent Pallet
-$accent-400: #5094FF;
-$accent-300: #83A8D4;
-$accent-200: #94B4DA;
-$accent-100: #A4BFDF;
-
-// Button Colors
-$cta-primary: #FC814A;
+@use '../Scss_Variable/colors.module.scss' as color;
 
 .footerContainer{
-    background-color: $white;
+    background-color: color.$white;
     width: 100%;
     padding: 16px;
-    border-top: 2px solid $accent-100;
+    border-top: 2px solid color.$accent-100;
 
     @media (min-width:576px) {
         padding: 16px 32px;
@@ -32,7 +17,7 @@ $cta-primary: #FC814A;
     align-items: center;
     flex-flow: column nowrap;
     list-style: none;
-    color: $text;
+    color: color.$text;
 
     li{
         margin: 8px auto;

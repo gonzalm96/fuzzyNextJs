@@ -1,27 +1,10 @@
-// Firgure out how to get this to work: @use './Scss_Variable/colors.module.scss';
-
-// Main Set of Colors
-$background: #ECF8F8;
-$text: #161925;
-$black: #161925;
-$white: #ffffff;
-
-// Accent Pallet
-$accent-400: #5094FF;
-$accent-300: #83A8D4;
-$accent-200: #94B4DA;
-$accent-100: #A4BFDF;
-$accent: $accent-400;
-
-// Button Colors
-$cta-primary: #FC814A;
-
+@use '../Scss_Variable/colors.module.scss' as color;
 
 .nav{
     position: relative;
-    background-color: $white;
+    background-color: color.$white;
     width: 100%;    
-    border-bottom: 2px solid $accent-100;
+    border-bottom: 2px solid color.$accent-100;
     padding: 8px 16px;
 
 
@@ -39,7 +22,7 @@ $cta-primary: #FC814A;
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    color: $text;
+    color: color.$text;
 
     @media (min-width: 576px) {
         flex-flow: row nowrap;
@@ -57,10 +40,10 @@ $cta-primary: #FC814A;
     
 
     li{
-        border-bottom: 2px solid $white;
+        border-bottom: 2px solid color.$white;
 
         &:hover{
-            border-bottom: 2px solid $accent;
+            border-bottom: 2px solid color.$accent;
         }
     }
 
@@ -75,7 +58,7 @@ $cta-primary: #FC814A;
     justify-content: center;
     flex-flow: row wrap;
     list-style: none;
-    background-color: $white;
+    background-color: color.$white;
     padding: 16px 0;
     
 
@@ -85,8 +68,8 @@ $cta-primary: #FC814A;
 
 
         &:focus{
-            background-color: $accent;
-            color: $white;
+            background-color: color.$accent;
+            color: color.$white;
             border-radius: 4px;
         }
 

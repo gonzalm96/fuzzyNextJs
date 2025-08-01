@@ -1,25 +1,10 @@
-// Firgure out how to get this to work: @use './Scss_Variable/colors.module.scss';
-
-// Main Set of Colors
-$background: #ECF8F8;
-$text: #161925;
-$black: #161925;
-$white: #ffffff;
-
-// Accent Pallet
-$accent-400: #5094FF;
-$accent-300: #83A8D4;
-$accent-200: #94B4DA;
-$accent-100: #A4BFDF;
-
-// Button Colors
-$cta-primary: #FC814A;
+@use '../Scss_Variable/colors.module.scss' as color;
 
 .feedContainer{
     width: 428px;
     height: fit-content;
     padding: 16px 24px;
-    background-color: $white;
+    background-color: color.$white;
     box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.3);
     -webkit-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.3);
     -moz-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.3);
